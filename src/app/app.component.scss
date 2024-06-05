@@ -1,0 +1,213 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.sidebar {
+  width: 60px;  // Ancho inicial del sidebar
+  height: calc(100vh - 60px);
+  background-color: #444;
+  overflow-x: hidden;
+  transition: width 0.3s;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  z-index: 1;
+}
+
+.sidebar:hover {
+  width: 200px;  // Ancho del sidebar cuando se despliega
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sidebar-item:hover {
+  background-color: #575757;
+}
+
+.sidebar-item i {
+  font-size: 1.2em;
+  margin-right: 10px;
+}
+
+.sidebar-text {
+  display: none;  // Ocultamos el texto por defecto
+}
+
+.sidebar:hover .sidebar-text {
+  display: inline;  // Mostramos el texto cuando el sidebar está desplegado
+}
+
+.content {
+  margin-left: 60px;  // Margen para el sidebar
+  transition: margin-left 0.3s;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.sidebar:hover ~ .content {
+  margin-left: 200px;  // Ajustamos el margen cuando el sidebar está desplegado
+}
+
+.paraphraser-container, .grammar-container, .profile.container, .history-container {
+  background-color: #ffffff;
+  padding: 20px;
+  max-width: 1200px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.profile-container h1,
+.history-container h1 {
+  margin-bottom: 20px;
+}
+.paraphraser-container h1, .grammar-container h1 {
+  margin-bottom: 20px;
+}
+
+.paraphraser-modes {
+  margin-bottom: 20px;
+}
+
+.paraphraser-modes span {
+  margin-right: 10px;
+}
+
+.profile-form,
+.history-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.paraphraser, .grammar-checker {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #cccccc;
+  font-family: 'Roboto', sans-serif;
+  width: 48%;
+  height: 400px;
+  resize: none;
+}
+
+button {
+  background-color: #2672cb;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #444;
+}
+
+/* Media Queries para hacer la página más responsive */
+@media (max-width: 768px) {
+  .paraphraser, .grammar-checker {
+    flex-direction: column;
+  }
+
+  textarea {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .sidebar:hover ~ .content {
+    margin-left: 60px;  // No cambiamos el margen en pantallas pequeñas
+  }
+}
+.history-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #cccccc;
+}
+
+.history-item i {
+  margin-right: 10px;
+}
+
+.history-item a {
+  color: #2672cb;
+  text-decoration: none;
+}
+.profile-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.profile-form {
+  display: flex;
+
+}
+
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #cccccc;
+}
