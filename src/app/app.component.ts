@@ -1,17 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ParaphrasingService } from './chat-gpt.service';
 import { catchError, take, tap } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
 import { ErrorResponse, ChatResponse } from './models/chat-response.model';
 import { ProfileService } from './profile.service';
 import { TranslationService } from './translation.service';
+import { Chart } from 'chart.js';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   mode = 'paraphrase';  // Modo inicial
   userMessage = '';
   paraphrasedMessage = '';
@@ -37,6 +38,7 @@ export class AppComponent {
   ngOnInit(): void {
     this.loadProfile();
     this.loadHistory();
+  
   }
   setMode(mode: string): void {
     this.mode = mode;
@@ -152,3 +154,4 @@ export class AppComponent {
     return of(null);
   }
 }
+

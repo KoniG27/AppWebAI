@@ -95,7 +95,7 @@
 }
 
 .sidebar:hover .sidebar-text {
-  display: inline;  // Mostramos el texto cuando el sidebar está desplegado
+  display: inline;  
 }
 
 .content {
@@ -110,7 +110,7 @@
 }
 
 .sidebar:hover ~ .content {
-  margin-left: 200px;  // Ajustamos el margen cuando el sidebar está desplegado
+  margin-left: 200px;  
 }
 
 .paraphraser-container, .grammar-container, .translator-container {
@@ -124,17 +124,14 @@
   text-align: center;
 }
 
-.profile-container h1,
-.history-container h1,
+
 .translator-container h1 {
   margin-bottom: 20px;
 }
 .paraphraser-modes {
   margin-bottom: 20px;
 }
-.input-group {
-  
-}
+
 .paraphraser-modes span {
   margin-right: 10px;
 }
@@ -155,6 +152,13 @@ textarea {
   font-family: 'Roboto', sans-serif;
   width: 48%;
   height: 400px;
+  resize: none;
+}
+select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #cccccc;
+  font-family: 'Roboto', sans-serif;
   resize: none;
 }
 
@@ -273,6 +277,7 @@ button:hover {
   color: #333;
 }
 
+
 /* Media Queries para hacer la página más responsive */
 @media (max-width: 768px) {
   .sidebar:hover ~ .content {
@@ -282,7 +287,8 @@ button:hover {
   .grammar-checker,
   .profile-form,
   .history-list,
-  .translator-container {
+  .translator-container,
+  .dashboard-container {
     flex-direction: column;
   }
 }
