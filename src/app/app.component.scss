@@ -42,7 +42,7 @@
 .container {
   display: flex;
   flex: 1;
-  margin-top: 60px; /* Ajusta el margen superior para el contenido debajo del header */
+  margin-top: 60px; 
 }
 .sidebar {
   width: 60px;  // Ancho inicial del sidebar
@@ -91,7 +91,7 @@
 }
 
 .sidebar-text {
-  display: none;  // Ocultamos el texto por defecto
+  display: none;  
 }
 
 .sidebar:hover .sidebar-text {

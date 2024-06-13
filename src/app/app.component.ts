@@ -5,7 +5,7 @@ import { Observable, of } from 'rxjs';
 import { ErrorResponse, ChatResponse } from './models/chat-response.model';
 import { ProfileService } from './profile.service';
 import { TranslationService } from './translation.service';
-import { Chart } from 'chart.js';
+
 
 @Component({
   selector: 'app-root',
@@ -153,5 +153,10 @@ export class AppComponent implements OnInit{
     }
     return of(null);
   }
+
+
+
+
+  
 }
 
